@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y8t-aY-oZw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Karte-->
+        <scene sceneID="NAo-gK-U2p">
+            <objects>
+                <viewController title="Karte" id="t0t-1i-2yj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CNM-ya-992"/>
+                        <viewControllerLayoutGuide type="bottom" id="gwj-Cq-6Za"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oxl-RY-Gyn" userLabel="Karte">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlC-Kb-xRt">
+                                <rect key="frame" x="426" y="96" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.98846777029999999" green="0.1832954011" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Karte" id="mf5-VP-yUm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHY-MF-c98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1464" y="-2520"/>
+        </scene>
+        <!--Vorhersage-->
+        <scene sceneID="pnp-MF-NgS">
+            <objects>
+                <viewController title="Vorhersage" id="5Ms-IZ-Zen" userLabel="Vorhersage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U81-U0-UIh"/>
+                        <viewControllerLayoutGuide type="bottom" id="OQM-Tr-dVN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gyS-IT-Hx2" userLabel="Vorhersage">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuZ-E0-PP8">
+                                <rect key="frame" x="52" y="37" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.35592162389999998" green="0.91129117400000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Vorhersage" id="MOI-JV-qJQ" userLabel="Vorhersage"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnR-Ia-RJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-832" y="-2520"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Luw-bD-aij">
+            <objects>
+                <tableViewController id="LJ2-2S-p4O" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OPN-V8-AaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AcJ-b7-3Xy">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AcJ-b7-3Xy" id="9dR-nH-zKx">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LJ2-2S-p4O" id="K0u-Dm-pXn"/>
+                            <outlet property="delegate" destination="LJ2-2S-p4O" id="fWR-jz-VFd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="CUA-47-2tV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qdv-Ir-VdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="-1747"/>
+        </scene>
+        <!--Stündlich-->
+        <scene sceneID="dLF-iK-BEP">
+            <objects>
+                <navigationController title="Stündlich" id="n3S-4n-w7o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Aktuell" id="R7W-rO-o0S" userLabel="Stündlich"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KFA-Os-q1U" userLabel="Stündlich">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LJ2-2S-p4O" kind="relationship" relationship="rootViewController" id="RJV-JL-1kq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfz-kc-2Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="-2511"/>
+        </scene>
+        <!--Jetzt-->
+        <scene sceneID="lOq-5T-LSX">
+            <objects>
+                <tabBarController title="Jetzt" id="Y8t-aY-oZw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ivN-sD-Ore" userLabel="Jetzt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.35592162389999998" green="0.91129117400000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="n3S-4n-w7o" kind="relationship" relationship="viewControllers" id="0TP-l4-Zeb"/>
+                        <segue destination="5Ms-IZ-Zen" kind="relationship" relationship="viewControllers" id="eNt-4R-f9P"/>
+                        <segue destination="t0t-1i-2yj" kind="relationship" relationship="viewControllers" id="9L2-gP-MUk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObF-2U-zcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-824" y="-3407"/>
+        </scene>
+    </scenes>
+</document>
