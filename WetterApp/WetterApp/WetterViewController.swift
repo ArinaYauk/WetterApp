@@ -9,11 +9,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WetterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       //self.view.backgroundColor [[UIColor alloc] , initWithPatternImage:
+           //[UIImageView imageNamed : @"Hintergrundbild.jpg"]] ;
+         //Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
