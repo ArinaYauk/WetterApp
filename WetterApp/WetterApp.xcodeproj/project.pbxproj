@@ -45,6 +45,7 @@
 		3F85E7631C6918B600410FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F85E7611C6918B600410FD3 /* Main.storyboard */; };
 		3F85E7651C6918B600410FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F85E7641C6918B600410FD3 /* Assets.xcassets */; };
 		3F85E7681C6918B600410FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F85E7661C6918B600410FD3 /* LaunchScreen.storyboard */; };
+		3FC936A31C6A499200AE4C8C /* HourlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC936A21C6A499200AE4C8C /* HourlyViewController.swift */; };
 		3FFA336B1C69DA3E00E826A2 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA336A1C69DA3E00E826A2 /* City.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		3F85E7641C6918B600410FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F85E7671C6918B600410FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F85E7691C6918B600410FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC936A21C6A499200AE4C8C /* HourlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyViewController.swift; sourceTree = "<group>"; };
 		3FFA336A1C69DA3E00E826A2 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = City.swift; path = ../City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 				3F75F6651C69EFBD00BE1776 /* Images */,
 				3F85E75D1C6918B600410FD3 /* AppDelegate.swift */,
 				3F85E75F1C6918B600410FD3 /* ViewController.swift */,
+				3FC936A21C6A499200AE4C8C /* HourlyViewController.swift */,
 				3F75F6A51C6A0CC200BE1776 /* WeatherService.swift */,
 				3F75F6A71C6A219100BE1776 /* Weather.swift */,
 				3F75F6AB1C6A463800BE1776 /* SwiftyJSON.swift */,
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC936A31C6A499200AE4C8C /* HourlyViewController.swift in Sources */,
 				3F75F6A61C6A0CC200BE1776 /* WeatherService.swift in Sources */,
 				3F85E7601C6918B600410FD3 /* ViewController.swift in Sources */,
 				3FFA336B1C69DA3E00E826A2 /* City.swift in Sources */,
