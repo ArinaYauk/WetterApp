@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WeatherServiceDelegate {
+    
+    
+    let weatherService = WeatherService()
+    
+    
 
     @IBOutlet weak var WeatherIcons: UIImageView!
     @IBOutlet weak var WeatherLabel: UILabel!
@@ -16,9 +21,58 @@ class ViewController: UIViewController {
     @IBOutlet weak var TempLabel: UILabel!
     @IBOutlet weak var MinMaxLabel: UILabel!
     
+    @IBAction func searchCity(sender: UIButton) {
+        print("City Button Tepped")
+        openCityAlert()
+    }
+    
+    func openCityAlert(){
+        //Create Alter Controller
+        let alert =  UIAlertController(title: "City",
+            message: "Enter city name",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        
+        //Create Cancel Action
+        let cancel = UIAlertAction(title: "Cancel",
+            style: UIAlertActionStyle.Cancel,
+            handler: nil)
+        
+        alert.addAction(cancel)
+        //Create Ok Action
+        let ok = UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default) {
+                (action: UIAlertAction) -> Void in
+            print("OK")
+                let textField = alert.textFields?[0]
+                print(textField?.text!)
+                self.CitynameLabel.text = textField?.text
+                let cityName = textField?.text
+                self.weatherService.getWetherForCity(cityName!)
+                
+        }
+        alert.addAction(ok)
+        
+        //Add text field
+        alert.addTextFieldWithConfigurationHandler {(textField: UITextField) -> Void in
+            textField.placeholder = "City Name"
+        
+        
+        }
+        
+        
+        // Present Alert Controller
+          self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+    // Weather Service Delegate
+    
+    
+    
+    
     
 
-        
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
@@ -29,7 +83,7 @@ class ViewController: UIViewController {
             // Dispose of any resources that can be recreated.
         }
         
-        override func viewDidAppear(animated: Bool) {
+     /*   override func viewDidAppear(animated: Bool) {
             super.viewDidAppear(animated)
             let weatherSwiftUrl = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=Wuerzburg,uk&appid=e13e41d66381c0f77368a2bd478ce818")
             
@@ -70,5 +124,5 @@ class ViewController: UIViewController {
         }
         }
     }
-*/
+*/*/
 }
