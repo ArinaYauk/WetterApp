@@ -14,12 +14,15 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     let weatherService = WeatherService()
     
     
+    @IBOutlet weak var WelcomeLabel: UILabel!
 
     @IBOutlet weak var WeatherIcons: UIImageView!
     @IBOutlet weak var WeatherLabel: UILabel!
     @IBOutlet weak var CitynameLabel: UILabel!
     @IBOutlet weak var TempLabel: UILabel!
     @IBOutlet weak var MinMaxLabel: UILabel!
+    
+    
     
     @IBAction func searchCity(sender: UIButton) {
         print("City Button Tepped")
@@ -45,12 +48,19 @@ class ViewController: UIViewController, WeatherServiceDelegate {
             print("OK")
                 let textField = alert.textFields?[0]
                 print(textField?.text!)
+                self.CitynameLabel.hidden = false
+                self.WeatherLabel.hidden = false
+                self.WeatherIcons.hidden = false
+                self.TempLabel.hidden = false
+                self.MinMaxLabel.hidden = false
+                self.WelcomeLabel.hidden = true
                 self.CitynameLabel.text = textField?.text
                 let cityName = textField?.text
                 self.weatherService.getWetherForCity(cityName!)
                 
         }
         alert.addAction(ok)
+        
         
         //Add text field
         alert.addTextFieldWithConfigurationHandler {(textField: UITextField) -> Void in
@@ -66,7 +76,11 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     }
     
     // Weather Service Delegate
+    func setWeather(weather: Weather) {
+        print("***Set Weather")
+        print("City: \(weather.cityName) temp: \(weather.temp) cond: \(weather.condition) minmax: \(weather.tempMinMax) image:  \(weather.image)")
     
+    }
     
     
     
@@ -76,6 +90,14 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
+            CitynameLabel.hidden = true
+            WeatherLabel.hidden = true
+            WeatherIcons.hidden = true
+            TempLabel.hidden = true
+            MinMaxLabel.hidden = true
+
+            self.weatherService.delegate = self
+            
         }
         
         override func didReceiveMemoryWarning() {
