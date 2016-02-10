@@ -69,15 +69,11 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         //Add text field
         alert.addTextFieldWithConfigurationHandler {(textField: UITextField) -> Void in
             textField.placeholder = "City Name"
-        
-        
         }
-        
         
         // Present Alert Controller
           self.presentViewController(alert, animated: true, completion: nil)
-        
-    }
+        }
     
     // Weather Service Delegate
     func setWeather(weather: Weather) {
@@ -89,11 +85,18 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         TempLabel.text = "\(weather.getTempInCelsius())°"
         MinLabel.text = "\(weather.getTempInCelsiusMin())°"
         MaxLabel.text = "\(weather.getTempInCelsiusMax())°"
-        
-        
+        WeatherIcons.image = UIImage(named: weather.image)
+        }
+    //display an error message from weather service
+    func weatherErrorWithMessage(message: String){
+        print("Weather Error Message: \(message)")
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alert.addAction(cancel)
+        self.presentViewController(alert, animated: true, completion: nil)
+        self.BackslashLabel.hidden = true
         
     }
-    
     
     
     
