@@ -19,9 +19,9 @@ class WeatherService {
    
    func getWetherForCity(city: String){
     
-      //let cityString = city
+      let cityEscaped = city.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
     
-    let weatherSwiftUrl = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=Wuerzburg,uk&appid=e13e41d66381c0f77368a2bd478ce818")
+    let weatherSwiftUrl = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(cityEscaped!.replaceUmlauteToEnglish())&appid=e13e41d66381c0f77368a2bd478ce818")
     
     let request = NSURLRequest(URL: weatherSwiftUrl!)
     let config = NSURLSessionConfiguration.defaultSessionConfiguration()
@@ -63,9 +63,6 @@ class WeatherService {
     }) .resume()
     }
 
-    
-    
-    
        // print("Weather Service city: \(city)")
         //request weather data
         // wait...
@@ -75,9 +72,9 @@ class WeatherService {
     if delegate != nil {
         delegate?.setWeather(weather)
     }*/
-        
-        
-        
-    }
     
+    }
+
+
+
 

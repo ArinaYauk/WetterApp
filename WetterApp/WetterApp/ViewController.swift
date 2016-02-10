@@ -83,7 +83,7 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     func setWeather(weather: Weather) {
         print("***Set Weather")
         print("City: \(weather.cityName) temp: \(weather.temp) cond: \(weather.condition) min: \(weather.tempMin) max: \(weather.tempMax) image:  \(weather.image)")
-        CitynameLabel.text = weather.cityName
+        CitynameLabel.text = weather.cityName.replaceUmlauteFromEnglish()
         WeatherLabel.text = weather.condition
        // WeatherIcons.image = weather.image
         TempLabel.text = "\(weather.getTempInCelsius())°"
@@ -118,6 +118,8 @@ class ViewController: UIViewController, WeatherServiceDelegate {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
+    
+    
         
      /*   override func viewDidAppear(animated: Bool) {
             super.viewDidAppear(animated)
@@ -161,4 +163,24 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         }
     }
 */*/
+}
+extension String {
+    func replaceUmlauteToEnglish() -> String {
+        return self.stringByReplacingOccurrencesOfString("ä", withString: "ae")
+            .stringByReplacingOccurrencesOfString("ö", withString: "oe")
+            .stringByReplacingOccurrencesOfString("ü", withString: "ue")
+            .stringByReplacingOccurrencesOfString("Ä", withString: "AE")
+            .stringByReplacingOccurrencesOfString("Ö", withString: "OE")
+            .stringByReplacingOccurrencesOfString("Ü", withString: "UE")
+    }
+    
+    func replaceUmlauteFromEnglish() -> String {
+        return self.stringByReplacingOccurrencesOfString("ae", withString: "ä")
+            .stringByReplacingOccurrencesOfString("oe", withString: "ö")
+            .stringByReplacingOccurrencesOfString("ue", withString: "ü")
+            .stringByReplacingOccurrencesOfString("AE", withString: "Ä")
+            .stringByReplacingOccurrencesOfString("OE", withString: "Ö")
+            .stringByReplacingOccurrencesOfString("UE", withString: "Ü")
+    }
+    
 }

@@ -19,16 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="A5e-pK-9Wk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeScreen" translatesAutoresizingMaskIntoConstraints="NO" id="A5e-pK-9Wk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-clear.png" translatesAutoresizingMaskIntoConstraints="NO" id="ao0-DM-OID">
-                                <rect key="frame" x="29" y="357" width="56" height="53"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="sgy-aF-0Bj"/>
-                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Würzburg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZL4-Qb-WYs">
                                 <rect key="frame" x="20" y="57" width="531" height="51"/>
@@ -94,13 +87,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x3-Bu-vnr">
-                                <rect key="frame" x="90" y="471" width="23" height="50"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTG-73-bkY">
                                 <rect key="frame" x="114" y="471" width="289" height="50"/>
                                 <animations/>
@@ -111,6 +97,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x3-Bu-vnr">
+                                <rect key="frame" x="90" y="471" width="23" height="50"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brocken" translatesAutoresizingMaskIntoConstraints="NO" id="ao0-DM-OID">
+                                <rect key="frame" x="29" y="357" width="56" height="53"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="sgy-aF-0Bj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -322,8 +322,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg.png" width="320" height="568"/>
-        <image name="weather-clear.png" width="32" height="32"/>
+        <image name="HomeScreen" width="320" height="568"/>
+        <image name="brocken" width="32" height="32"/>
         <image name="weather-few-night.png" width="32" height="32"/>
         <image name="weather-shower.png" width="32" height="32"/>
     </resources>
