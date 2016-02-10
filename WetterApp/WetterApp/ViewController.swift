@@ -14,15 +14,17 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     let weatherService = WeatherService()
     
     
+    @IBOutlet weak var BackslashLabel: UILabel!
     @IBOutlet weak var WelcomeLabel: UILabel!
 
     @IBOutlet weak var WeatherIcons: UIImageView!
     @IBOutlet weak var WeatherLabel: UILabel!
     @IBOutlet weak var CitynameLabel: UILabel!
     @IBOutlet weak var TempLabel: UILabel!
-    @IBOutlet weak var MinMaxLabel: UILabel!
+    @IBOutlet weak var MinLabel: UILabel!
     
     
+    @IBOutlet weak var MaxLabel: UILabel!
     
     @IBAction func searchCity(sender: UIButton) {
         print("City Button Tepped")
@@ -52,8 +54,10 @@ class ViewController: UIViewController, WeatherServiceDelegate {
                 self.WeatherLabel.hidden = false
                 self.WeatherIcons.hidden = false
                 self.TempLabel.hidden = false
-                self.MinMaxLabel.hidden = false
+                self.MinLabel.hidden = false
+                self.MaxLabel.hidden = false
                 self.WelcomeLabel.hidden = true
+                self.BackslashLabel.hidden = false
                 self.CitynameLabel.text = textField?.text
                 let cityName = textField?.text
                 self.weatherService.getWetherForCity(cityName!)
@@ -78,8 +82,16 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     // Weather Service Delegate
     func setWeather(weather: Weather) {
         print("***Set Weather")
-        print("City: \(weather.cityName) temp: \(weather.temp) cond: \(weather.condition) minmax: \(weather.tempMinMax) image:  \(weather.image)")
-    
+        print("City: \(weather.cityName) temp: \(weather.temp) cond: \(weather.condition) min: \(weather.tempMin) max: \(weather.tempMax) image:  \(weather.image)")
+        CitynameLabel.text = weather.cityName
+        WeatherLabel.text = weather.condition
+       // WeatherIcons.image = weather.image
+        TempLabel.text = "\(weather.getTempInCelsius())°"
+        MinLabel.text = "\(weather.getTempInCelsiusMin())°"
+        MaxLabel.text = "\(weather.getTempInCelsiusMax())°"
+        
+        
+        
     }
     
     
@@ -94,7 +106,9 @@ class ViewController: UIViewController, WeatherServiceDelegate {
             WeatherLabel.hidden = true
             WeatherIcons.hidden = true
             TempLabel.hidden = true
-            MinMaxLabel.hidden = true
+            MinLabel.hidden = true
+            MaxLabel.hidden = true
+            BackslashLabel.hidden = true
 
             self.weatherService.delegate = self
             
