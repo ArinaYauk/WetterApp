@@ -32,20 +32,6 @@ class WeatherService {
     session.dataTaskWithRequest(request, completionHandler:{
         ( data: NSData?, response: NSURLResponse?, error: NSError?) in
         
-        /*guard data != nil else{
-            return
-        }
-        var jsonResult:NSDictionary!
-        do{
-            jsonResult = try (NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary)!
-        }catch{
-            print(error)
-        }
-        guard let jsonResultUnwrapped = jsonResult else{
-            return
-        }
-        print(jsonResultUnwrapped)
-        */
         if let httpResponse = response as? NSHTTPURLResponse {
             print("*******")
             print(httpResponse.statusCode)
@@ -69,18 +55,18 @@ class WeatherService {
         {
         let name = json ["name"].string
         let temp = json ["main"]["temp"].double
-        let min = json ["main"]["temp_min"].double
-        let max = json ["main"]["temp_max"].double
+        let humid = json ["main"]["humidity"].int
+        let speed = json ["wind"]["speed"].double
         let desc = json["weather"][0]["description"].string
         let image = json ["weather"][0]["icon"].string
     
         let weather = Weather(cityName: name!,
         temp: temp!,
         condition: desc!,
-        tempMin: min!,
-        tempMax: max!,
+        humid: humid!,
+        windSpeed: speed!,
         image: image!)
-        
+            
         if self.delegate != nil {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.delegate?.setWeather(weather)
@@ -107,19 +93,8 @@ class WeatherService {
     }
                 
     }) .resume()
-    }
-
-       // print("Weather Service city: \(city)")
-        //request weather data
-        // wait...
-        //process data
-  /*  let weather = Weather(cityName: city, temp: 25, condition: "Cloudly", tempMinMax: 23.0,  image: "wolken")
-    
-    if delegate != nil {
-        delegate?.setWeather(weather)
-    }*/
-    
-    }
+  }
+}
 
 
 

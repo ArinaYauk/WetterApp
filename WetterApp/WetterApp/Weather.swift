@@ -12,16 +12,16 @@ class Weather {
     let cityName: String
     let temp: Double
     let condition: String
-    let tempMin: Double
-    let tempMax: Double
+    let humid: Int
+    let windSpeed: Double
     let image: String
     
-    init(cityName: String, temp: Double, condition: String, tempMin: Double, tempMax: Double, image: String){
+    init(cityName: String, temp: Double, condition: String, humid: Int, windSpeed: Double, image: String){
         self.cityName = cityName
         self.temp = temp
         self.condition = condition
-        self.tempMin = tempMin
-        self.tempMax = tempMax
+        self.humid = humid
+        self.windSpeed = windSpeed
         self.image = image
         
         
@@ -33,7 +33,7 @@ class Weather {
         let tempInCelsius = self.temp - 273.15
         return Double(format.stringFromNumber(tempInCelsius)!)!
     }
-    func getTempInCelsiusMin() -> Double {
+    /*func getTempInCelsiusMin() -> Double {
         let format = NSNumberFormatter()
         format.numberStyle = NSNumberFormatterStyle.DecimalStyle
         format.maximumFractionDigits = 1
@@ -46,6 +46,6 @@ class Weather {
         format.maximumFractionDigits = 1
         let tempInCelsiusMax = self.tempMax - 273.15
         return Double(format.stringFromNumber(tempInCelsiusMax)!)!
-    }
+    }*/
     
 }
