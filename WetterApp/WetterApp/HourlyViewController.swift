@@ -10,13 +10,18 @@ import UIKit
 
 class HourlyViewController: UITableViewController {
 
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
+    
   var hourlies = [Hourly]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.hourlies = [Hourly(name: "Sonnig", temp: "23.0"), Hourly(name: "Wolkig", temp: "23.0"), Hourly(name: "Neblich", temp: "23.0"), Hourly(name: "Regen", temp: "22.0")]
+        //self.hourlies = [Hourly(name: "Sonnig", temp: "23.0"), Hourly(name: "Wolkig", temp: "23.0"), Hourly(name: "Neblich", temp: "23.0"), Hourly(name: "Regen", temp: "22.0")]
         //self.hourlies = [Hourly(temp: 25.0), Hourly(temp: 23.0), Hourly(temp: 21.0), Hourly(name: 29.0)]
         
     }

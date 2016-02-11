@@ -79,13 +79,15 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     func setWeather(weather: Weather) {
         print("***Set Weather")
         print("City: \(weather.cityName) temp: \(weather.temp) cond: \(weather.condition) min: \(weather.tempMin) max: \(weather.tempMax) image:  \(weather.image)")
-        CitynameLabel.text = weather.cityName.replaceUmlauteFromEnglish()
+       
+            CitynameLabel.text = weather.cityName.replaceUmlauteFromEnglish()
+        
         WeatherLabel.text = weather.condition
        // WeatherIcons.image = weather.image
         TempLabel.text = "\(weather.getTempInCelsius())°"
         MinLabel.text = "\(weather.getTempInCelsiusMin())°"
         MaxLabel.text = "\(weather.getTempInCelsiusMax())°"
-        WeatherIcons.image = UIImage(named: weather.image)
+            WeatherIcons.image = UIImage(named: weather.image)
         }
     //display an error message from weather service
     func weatherErrorWithMessage(message: String){

@@ -93,6 +93,7 @@ class WeatherService {
             if self.delegate != nil {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.delegate?.weatherErrorWithMessage("City not found")
+                    
                 })
             }
             

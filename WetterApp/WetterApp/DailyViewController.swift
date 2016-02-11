@@ -38,7 +38,7 @@ class DailyViewController: UITableViewController {
         daily = dailies[indexPath.row]
         
         cell.textLabel?.text = daily.name
-        
+       // cell.textLabel?.text = "\(daily.temp)"
         
         return cell
         

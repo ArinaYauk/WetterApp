@@ -9,9 +9,9 @@
 import Foundation
 
 class Hourly {
-    let name : String
+    /*let name : String
     let temp : String
-    //let image: String
+   //let image: String
     
     
     
@@ -19,6 +19,6 @@ class Hourly {
         self.name = name
         self.temp = temp
         //self.image = image
-    }
+    }*/
     
 }
