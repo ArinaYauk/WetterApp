@@ -164,56 +164,6 @@
             </objects>
             <point key="canvasLocation" x="-464" y="671"/>
         </scene>
-        <!--Daily-->
-        <scene sceneID="fCE-Ui-WJF">
-            <objects>
-                <tableViewController title="Daily" id="V4y-kt-pVs" customClass="DailyViewController" customModule="WetterApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HZ5-oK-ie8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondCell" textLabel="MaW-Hz-E16" style="IBUITableViewCellStyleDefault" id="Qdi-m4-pAE">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qdi-m4-pAE" id="pZ2-LM-ezi">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MaW-Hz-E16">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yos-kj-OlJ">
-                                            <rect key="frame" x="279" y="12" width="42" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="V4y-kt-pVs" id="J0X-pC-NCZ"/>
-                            <outlet property="delegate" destination="V4y-kt-pVs" id="JuC-x2-Kqn"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Daily" id="6PL-iS-axF"/>
-                    <navigationItem key="navigationItem" title="Daily" id="dlF-tz-PEh"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aOV-4f-vwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="680" y="1839"/>
-        </scene>
         <!--Forcast-->
         <scene sceneID="W34-7O-1Ds">
             <objects>
@@ -252,7 +202,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="Wgq-v9-hxB" kind="show" id="rPy-Og-L4m"/>
+                                    <segue destination="Wgq-v9-hxB" kind="showDetail" action="showViewController:sender:" id="rPy-Og-L4m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -267,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="-826" y="1879"/>
         </scene>
-        <!--Hourly View Controller-->
+        <!--Hourly-->
         <scene sceneID="vMo-bj-fq6">
             <objects>
-                <tableViewController id="Wgq-v9-hxB" customClass="HourlyViewController" customModule="WetterApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Hourly" id="Wgq-v9-hxB" customClass="HourlyViewController" customModule="WetterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9am-Zk-QB8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,59 +228,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="CV2-SM-nGz">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CV2-SM-nGz" id="faG-qh-FWB">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25.0°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ND-9I-SHq">
-                                            <rect key="frame" x="534" y="2" width="53" height="37.5"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sP-lc-4fb">
-                                            <rect key="frame" x="78" y="0.0" width="89" height="21.5"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01n" translatesAutoresizingMaskIntoConstraints="NO" id="Pvi-1B-ill">
-                                            <rect key="frame" x="18" y="4" width="35" height="31.5"/>
-                                            <animations/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sonnig" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VS-Bb-bHf">
-                                            <rect key="frame" x="78" y="19" width="133" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Wgq-v9-hxB" id="aPK-J0-Oue"/>
-                            <outlet property="delegate" destination="Wgq-v9-hxB" id="0Zv-1f-j7J"/>
-                        </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="conditionLabel" destination="6VS-Bb-bHf" id="u5t-ql-h21"/>
-                        <outlet property="iconImage" destination="Pvi-1B-ill" id="oug-tL-Dqo"/>
-                        <outlet property="tempLabel" destination="1ND-9I-SHq" id="Oc0-MQ-KjU"/>
-                        <outlet property="timeLabel" destination="3sP-lc-4fb" id="5p6-hy-Khl"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIl-Ie-ma8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="1874"/>
+            <point key="canvasLocation" x="12" y="1617"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hgV-VH-Hj2">
@@ -352,73 +264,9 @@
             </objects>
             <point key="canvasLocation" x="-1456" y="1120"/>
         </scene>
-        <!--Hourly-->
-        <scene sceneID="CVa-la-DgQ">
-            <objects>
-                <tableViewController title="Hourly" id="BLi-5s-MjT" customClass="HourlyViewController" customModule="WetterApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="seo-Wd-vVZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="CIk-XT-i8O" style="IBUITableViewCellStyleDefault" id="O3F-uP-Quk">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O3F-uP-Quk" id="CIu-pS-Wjq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CIk-XT-i8O">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQG-Rz-VVV">
-                                            <rect key="frame" x="279" y="12" width="42" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdB-ac-hOv">
-                                            <rect key="frame" x="249" y="10.5" width="101" height="22.5"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" image="weather-few-night.png" highlightedImage="weather-shower.png" translatesAutoresizingMaskIntoConstraints="NO" id="GKd-if-a4z" userLabel="Image">
-                                            <rect key="frame" x="284" y="6" width="32" height="32"/>
-                                            <animations/>
-                                        </imageView>
-                                    </subviews>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="BLi-5s-MjT" id="eaw-xi-VoZ"/>
-                            <outlet property="delegate" destination="BLi-5s-MjT" id="2Xt-Rp-eSW"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Hourly" id="nAi-FD-CD4" userLabel="Hourly"/>
-                    <navigationItem key="navigationItem" title="Hourly" id="lyz-P9-zPn"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pNx-QJ-dBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="514" y="1972"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="01n" width="32" height="32"/>
         <image name="HomeScreen" width="320" height="568"/>
         <image name="brocken" width="32" height="32"/>
-        <image name="weather-few-night.png" width="320" height="568"/>
-        <image name="weather-shower.png" width="320" height="568"/>
     </resources>
 </document>

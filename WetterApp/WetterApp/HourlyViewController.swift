@@ -2,27 +2,24 @@
 //  HourlyViewController.swift
 //  WetterApp
 //
-//  Created by student on 09.02.16.
+//  Created by student on 11.02.16.
 //  Copyright © 2016 student. All rights reserved.
 //
+
+//import Foundation
+
 import UIKit
 
-
-class HourlyViewController: UITableViewController {
-
-    @IBOutlet weak var tempLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var conditionLabel: UILabel!
-    @IBOutlet weak var iconImage: UIImageView!
+class HouryViewController: UITableViewController {
     
-  var hourlies = [Hourly]()
+    var hourlies = [Hourly]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.hourlies = [Hourly(name: "Sonnig", temp: "23.0"), Hourly(name: "Wolkig", temp: "23.0"), Hourly(name: "Neblich", temp: "23.0"), Hourly(name: "Regen", temp: "22.0")]
-        //self.hourlies = [Hourly(temp: 25.0), Hourly(temp: 23.0), Hourly(temp: 21.0), Hourly(name: 29.0)]
+        self.hourlies = [Hourly(name: "Sonnig", temp: 23.0), Hourly(name: "Wolkig", temp: 23.0), Hourly(name: "Neblich", temp: 23.0), Hourly(name: "Regen", temp: 22.0)]
+        
         
     }
     
@@ -39,27 +36,13 @@ class HourlyViewController: UITableViewController {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         var hourly : Hourly
         
-        hourly =  hourlies[indexPath.row]
+        hourly = hourlies[indexPath.row]
         
         cell.textLabel?.text = hourly.name
-     //  cell.textLabel?.text = hourly.image
-        cell.textLabel?.text = hourly.temp
+        // cell.textLabel?.text = "\(daily.temp)"
         
-            return cell
+        return cell
         
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
